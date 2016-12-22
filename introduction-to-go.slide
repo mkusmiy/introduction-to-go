@@ -186,7 +186,7 @@ In Go an identifier is any word that starts with a _letter_.
 
 A letter is anything that Unicode defines to be a letter, this includes Kanji, Cyrillic, Latin, etc.
 
-- Identifiers are not restricted to ASCII, edit the slide and change `students` to `学生の` and press *Run*.
+- Identifiers are not restricted to ASCII, edit the slide and change `students` to `Студенти` and press *Run*.
 - If you make a mistake, just reload the page.
 
 * Identifiers (cont.)
@@ -1314,7 +1314,7 @@ Let's write a clock, a program that prints out the current time
 
 * Testing
 
-I wanted to spend some time on testing because for the rest of the day we'll be using tests to complete code katas.
+I wanted to spend some time on testing because for the rest of the day we'll be using tests to complete code exercises.
 
 The testing package can also contain benchmark functions and examples, which show up in godoc.
 
@@ -1387,9 +1387,9 @@ Go ships with a rich standard library of packages. This includes
 
 As a warm up, let's do a small exercise together. 
 
-The code for this exercise is in `$GOPATH/src/katas/sprintf`
+The code for this exercise is in `$GOPATH/src/exercises/sprintf`
 
-If you get stuck, the answers are in `$GOPATH/src/katas/sprintf/answers_test.go`.
+If you get stuck, the answers are in `$GOPATH/src/exercises/sprintf/answers_test.go`.
 
 * Structs
 
@@ -1425,7 +1425,7 @@ In Go, you can attach a function to a type that you declare, this is called a _m
 
 Any type that implements a `String()`string` method will be used by the `fmt` package when it prints the value.
 
-- Complete the exercise in `$GOPATH/src/katas/methods` by making all the tests pass.
+- Complete the exercise in `$GOPATH/src/exercises/methods` by making all the tests pass.
 
 * Pointers
 
@@ -1435,7 +1435,7 @@ In Go, the method's receiver is also a value, so it's copied when you call a met
 
 .play -edit src/pointers/pointers1.go /START OMIT/,/END OMIT/
 
-- Complete the exercise in `$GOPATH/src/katas/pointers` by making the test pass.
+- Complete the exercise in `$GOPATH/src/exercises/pointers` by making the test pass.
 
 * Interfaces
 
@@ -1457,13 +1457,13 @@ Go does not have an _implements_ keyword, any type with the correct set of metho
 
 This exercise asks you to write a function that reads lines from an io.Reader and returns a string containing all the lines read.
 
-The code for this exercise is in `$GOPATH/src/katas/input`
+The code for this exercise is in `$GOPATH/src/exercises/input`
 
 * Readers
 
 To familarise you with the `io.Reader` implementations available in the `io` package, this exercise is all about Readers.
 
-- Complete the exercise in `$GOPATH/src/katas/readers` by making the test pass.
+- Complete the exercise in `$GOPATH/src/exercises/readers` by making the test pass.
 - If you get stuck, consult the documentation in the [[https://golang.org/pkg/io/][`io`]] package.
 
 * Error handling
@@ -1500,7 +1500,7 @@ Go uses the `error` interface and a simple convention to implement error handlin
 
 Now we know about `io.Reader`'s, `error`'s, we can write some more useful programs.
 
-The code for this exercise is in `$GOPATH/src/katas/countlines`
+The code for this exercise is in `$GOPATH/src/exercises/countlines`
 
 _Note_:
 
@@ -1521,13 +1521,13 @@ In the previous counting example, if an error happened, the program would exit.
 
 In this exercise, we'll handle errors by returning them to the caller.
 
-The code for this exercise is in `$GOPATH/src/katas/errorhandling`
+The code for this exercise is in `$GOPATH/src/exercises/errorhandling`
 
 * Passing in a reader
 
 Let's turn out `Countlines` function into a program.
 
-The code for this exercise is in `$GOPATH/src/katas/linecount`
+The code for this exercise is in `$GOPATH/src/exercises/linecount`
 
 Complete the program so it reads the number of lines sent to it via stdin.
 
@@ -1538,7 +1538,7 @@ Complete the program so it reads the number of lines sent to it via stdin.
 
 Let's extend our `linecount` program to handle files passed on the command line.
 
-The code for this exercise is in `$GOPATH/src/katas/countmanyfiles`
+The code for this exercise is in `$GOPATH/src/exercises/countmanyfiles`
 
 Complete the program so it counts the lines in files passed via the command line.
 
@@ -1557,7 +1557,7 @@ To do this we use the [[https://golang.org/pkg/os/#File.Readdir][`ReadDir`]] met
 
 _Note_: Be careful to only read _files_, not directories, and do not read files that don't end in `.txt`
 
-The code for this exercise is in `$GOPATH/src/katas/countdir`
+The code for this exercise is in `$GOPATH/src/exercises/countdir`
 
 Complete the program so it counts the lines in files passed via the command line.
 
@@ -1585,7 +1585,7 @@ Let's write a simple HTTP client that can fetch HTTP URLs.
    "origin": "125.203.122.114"
  }
 
-The code for this exercise is in `$GOPATH/src/katas/httpget`
+The code for this exercise is in `$GOPATH/src/exercises/httpget`
 
 * JSON parsing
 
@@ -1605,7 +1605,7 @@ Let's use this to write a program that will tell us our public IP address.
  % ./whatismyip 
  My IP address is: 125.203.122.114
 
-The code for this exercise is in `$GOPATH/src/katas/whatismyip`
+The code for this exercise is in `$GOPATH/src/exercises/whatismyip`
 
 * JSON encoding
 
@@ -1627,7 +1627,7 @@ The format of the JSON tag is documented on the [[https://golang.org/pkg/encodin
 
 * JSON encoding exercise
 
-The code for this exercise is in `$GOPATH/src/katas/jsonenc`
+The code for this exercise is in `$GOPATH/src/exercises/jsonenc`
 
 * Writing HTTP servers
 
@@ -1704,7 +1704,7 @@ Features:
  % curl http://localhost:8080/books/moby.txt
  {"title":"moby.txt","lines":"22659"}
 
-The code for this exercise is in `$GOPATH/src/katas/httplinecount`
+The code for this exercise is in `$GOPATH/src/exercises/httplinecount`
 
 * Documenting packages with comments
 
