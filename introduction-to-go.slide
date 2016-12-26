@@ -112,7 +112,7 @@ Go is an opinionated language.
 
 * Hello, http!
 
-.play -edit src/hellohttp/hellohttp.go
+.code -edit src/hellohttp/hellohttp.go
 
 * Basic Syntax
 
@@ -160,7 +160,7 @@ There are six kinds of constants
 
 To make a constant, we declare one with the `const` keyword.
 
-.play -edit src/const/const1/main.go /START OMIT/,/END OMIT/
+.code -edit src/const/const1/main.go /START OMIT/,/END OMIT/
 
 Whenever you see a *Run* button on a slide, you can execute the code.
 
@@ -182,7 +182,7 @@ An identifier is a name your give to something in your code.
 
 In Go an identifier is any word that starts with a _letter_.
 
-.play -edit src/identifier/identifier1/main.go /START OMIT/,/END OMIT/
+.code -edit src/identifier/identifier1/main.go /START OMIT/,/END OMIT/
 
 A letter is anything that Unicode defines to be a letter, this includes Kanji, Cyrillic, Latin, etc.
 
@@ -195,7 +195,7 @@ An identifier must start with a Unicode letter, or the underscore character, `_`
 
 Numbers are not permitted at the start of an identifier, but can appear later in the identifier.
 
-.play -edit src/identifier/identifier2/main.go /START OMIT/,/END OMIT/
+.code -edit src/identifier/identifier2/main.go /START OMIT/,/END OMIT/
 
 Here are some examples of _invalid_ identifiers.
 
@@ -210,7 +210,7 @@ Go supports two kinds of comments:
 - Inline comments, which start with a double forward slash, `//`.
 - Block comments, which start with a forward slash and a star, `/*`, and end with a star and forward slash, `*/`.
 
-.play -edit src/comments/comments1/main.go /START OMIT/,/END OMIT/
+.code -edit src/comments/comments1/main.go /START OMIT/,/END OMIT/
 
 Code that is commented out will not be compiled or run.
 
@@ -239,7 +239,7 @@ A variable holds a value that can be changed over time.
 
 You _declare_ a new variable with the `var` declaration.
 
-.play -edit src/variable/variable1/main.go /START OMIT/,/END OMIT/
+.code -edit src/variable/variable1/main.go /START OMIT/,/END OMIT/
 
 Just like constants, variable _identifiers_ can be any any valid Unicode word.
 
@@ -253,7 +253,7 @@ Unused variables are often the source of bugs. If you declare a variable in the 
 
 If the variable is unused, you should delete it, or assign it temporarily to the magic variable called `_`.
 
-.play -edit src/variable/variable2/main.go /START OMIT/,/END OMIT/
+.code -edit src/variable/variable2/main.go /START OMIT/,/END OMIT/
 
 This program has four unused variables.
 
@@ -282,7 +282,7 @@ There are several kinds of statements in Go, we've seen a few already. The most 
 
 It is common that you need to change the value stored in a variable, this is called _Assignment_.
 
-.play -edit src/assignment/assignment1/main.go /START OMIT/,/END OMIT/
+.code -edit src/assignment/assignment1/main.go /START OMIT/,/END OMIT/
 
 In this example, we declare
 
@@ -293,7 +293,7 @@ In this example, we declare
 
 You can only assign a new value to _variables_.
 
-.play -edit src/assignment/assignment2/main.go /START OMIT/,/END OMIT/
+.code -edit src/assignment/assignment2/main.go /START OMIT/,/END OMIT/
 
 It is a syntax error to assign a new value to a constant.
 
@@ -305,7 +305,7 @@ It is a syntax error to assign a new value to a constant.
 
 Go supports a limited form of variable post-increment and post-decrement, ie. `x++`, `x--`.
 
-.play -edit src/increment/increment1/main.go /START OMIT/,/END OMIT/
+.code -edit src/increment/increment1/main.go /START OMIT/,/END OMIT/
 
 - Press *Run* and see the program prints `2`,
 - Edit the sample code to subtract `1` from `i` using the decrement operator `i--`.
@@ -315,7 +315,7 @@ Go supports a limited form of variable post-increment and post-decrement, ie. `x
 
 `i++` and `i--` are _statements_, not an _expressions_, they do not produce a value.
 
-.play -edit src/increment/increment2/main.go /START OMIT/,/END OMIT/
+.code -edit src/increment/increment2/main.go /START OMIT/,/END OMIT/
 
 This program has a syntax error. 
 
@@ -344,7 +344,7 @@ The parts of a `for` statement are:
 
 Let's practice using loops.
 
-.play -edit src/loops/loops1/main.go /START OMIT/,/END OMIT/
+.code -edit src/loops/loops1/main.go /START OMIT/,/END OMIT/
 
 This program counts from `1` to `10`, can you make it print only the _even_ numbers.
 
@@ -357,7 +357,7 @@ _note_: you do not need to put `(` braces around the `for` condition `)`. In fac
 
 Let's practice counting down, this is where you would use a `while` loop in other languages.
 
-.play -edit src/loops/loops2/main.go /START OMIT/,/END OMIT/
+.code -edit src/loops/loops2/main.go /START OMIT/,/END OMIT/
 
 This program counts down from `10` to `1`, can you make it count from `7` to `3`.
 
@@ -390,7 +390,7 @@ In some cases the body of the `else` block may be omitted. This is very common w
 
 Let's revisit our previous even numbers `for` loop example.
 
-.play -edit src/conditionals/conditionals1/main.go /START OMIT/,/END OMIT/
+.code -edit src/conditionals/conditionals1/main.go /START OMIT/,/END OMIT/
 
 This program counts from `1` to `10`, can you make it print only the _even_ numbers.
 
@@ -407,7 +407,7 @@ We say that when everything is true the code reads from the top to the bottom of
 
 We can rewrite the previous program using a new statement, `continue`, which _skips_ the body of the loop.
 
-.play -edit src/conditionals/conditionals2/main.go /START OMIT/,/END OMIT/
+.code -edit src/conditionals/conditionals2/main.go /START OMIT/,/END OMIT/
 
 - Uncomment the `if`i%1`==`1`{`, `continue`, and `}` lines.
 - Press *Run* and check the program compiles and prints the correct answer, `2`, `4`, `6`, `8`, `10`.
@@ -418,7 +418,7 @@ This program is an _infinite_loop_. There is no _condition_expression_ in the `f
 
 We can use the `break` statement, which breaks out of the _current_ loop, to fix it.
 
-.play -edit src/conditionals/conditionals3/main.go /START OMIT/,/END OMIT/
+.code -edit src/conditionals/conditionals3/main.go /START OMIT/,/END OMIT/
 
 - Uncomment the `if`i`>`10`{`, `break`, and `}` lines.
 - Press *Run* and check the program compiles and prints the correct answer, `2`, `4`, `6`, `8`, `10`.
@@ -474,7 +474,7 @@ Strings are the most common data type in Go programs.
 
 String types behave much as you would expect in other languages.
 
-.play -edit src/strings/strings1/main.go /START OMIT/,/END OMIT/
+.code -edit src/strings/strings1/main.go /START OMIT/,/END OMIT/
 
 Strings may be _concatenated_ with the `+` operator.
 
@@ -506,7 +506,7 @@ Why does Go support so many kinds of integer types?
 
 Different _sized_ integer types can accommodate different ranges of numbers.
 
-.play -edit src/types/types1/main.go /START OMIT/,/END OMIT/
+.code -edit src/types/types1/main.go /START OMIT/,/END OMIT/
 
 This program contains two type errors.
 
@@ -520,7 +520,7 @@ Now it's time to talk about _functions_.
 
 All Go you write is made up of functions, in fact, you've been writing functions all along.
 
-.play -edit src/functions/functions1/main.go /START OMIT/,/END OMIT/
+.code -edit src/functions/functions1/main.go /START OMIT/,/END OMIT/
 
 This is the same program as the previous example, showing the _function_declaration_, which was previously hidden.
 
@@ -531,7 +531,7 @@ This is the same program as the previous example, showing the _function_declarat
 You can declare your own functions with the `func` declaration.
 A function's name must be a valid identifier, just like `const` and `var`.
 
-.play -edit src/functions/functions2/main.go /START OMIT/,/END OMIT/
+.code -edit src/functions/functions2/main.go /START OMIT/,/END OMIT/
 
 This program declares two functions, `main` and `hello`.
 
@@ -546,7 +546,7 @@ To make functions useful, you often need to pass _arguments_ to a function.
 
 To pass an argument to a function, the type of the argument and the type of the function's _formal_parameter_ must be the same.
 
-.play -edit src/functions/functions3/main.go /START OMIT/,/END OMIT/
+.code -edit src/functions/functions3/main.go /START OMIT/,/END OMIT/
 
 In this program the type of the argument passed to `hello` does not match the type of the `name` parameter.
 
@@ -561,7 +561,7 @@ Each source file in a package must begin with the same `package` declaration.
 
 A package's name must be a valid identifier, just like `const`, `var`, and `func`.
 
-.play -edit src/packages/packages1/main.go
+.code -edit src/packages/packages1/main.go
 
 This is the same example as the previous slide, revealing the `package` declaration.
 
@@ -571,7 +571,7 @@ This is the same example as the previous slide, revealing the `package` declarat
 
 This program has the wrong `package` declaration.
 
-.play -edit src/packages/packages2/main.go
+.code -edit src/packages/packages2/main.go
 
 - Press *Run* and observe the compile error.
 - Change the `package` declaration to make the program compile.
@@ -604,7 +604,7 @@ both import the `fmt` and `time` packages. The syntax is different, but they are
 
 The `import` declaration must appear _after_ the `package` declaration, but before any `type`, `const`, `var`, or `func` declarations.
 
-.play -edit src/imports/imports1/main.go 
+.code -edit src/imports/imports1/main.go 
 
 This program does not compile as the `import` declaration is in the wrong place.
 
@@ -615,7 +615,7 @@ This program does not compile as the `import` declaration is in the wrong place.
 
 Packages contain both _public_ and _private_ symbols. We also call these _exported_ and _not_exported_, respectively.
 
-.play -edit src/imports/imports2/main.go 
+.code -edit src/imports/imports2/main.go 
 
 This program does not compile as it refers to two _private_ symbols.
 
@@ -628,7 +628,7 @@ _note_: If you are running this slide from [[https://go-talks.golang.org/][gotal
 
 Do you remember this program?
 
-.play -edit src/imports/imports3/main.go
+.code -edit src/imports/imports3/main.go
 
 Here it is again, showing the `func`, `package` and `import` declarations making it a complete Go program.
 
@@ -903,7 +903,7 @@ was and empty slice, a slice with length of zero.
 
 What is the value of each of the elements of a newly created, with make, slice?
 
-.play -edit src/slices/slices5/main.go
+.code -edit src/slices/slices5/main.go
 
 - Follow [[https://play.golang.org/p/kGh_C1l6KW][this link]] and press the *Run* button.
 - Did the program print the result you expected?
@@ -914,7 +914,7 @@ We want to create an `[]int` slice of the first 10 prime numbers, how could we d
 
 One solution could be to create the slice and assign a value to each element in the slice.
 
-.play -edit src/slices/slices6/main.go
+.code -edit src/slices/slices6/main.go
 
 * Slice initialisation (cont.)
 
@@ -922,7 +922,7 @@ Doing this manually is verbose and boring; how would you do this for the first 5
 
 Go supports a method of assignment where we both _declare_ and _initalise_ the slice at once.
 
-.play -edit src/slices/slices7/main.go
+.code -edit src/slices/slices7/main.go
 
 This is called the _composite_literal_ syntax.
 
@@ -932,7 +932,7 @@ This is called the _composite_literal_ syntax.
 
 So far we've been using slices with a known length. You can extend the contents of a slice with the built-in `append` function.
 
-.play -edit src/slices/slices8/main.go
+.code -edit src/slices/slices8/main.go
 
 `append` increases the length of the slice to accommodate the new items, then returns a new slice value.
 
@@ -948,7 +948,7 @@ We call this slicing a slice, or _subslicing_.
 
 Subslicing looks similar to the _indexing_ operation we saw a few slide ago, except it refers to a range of slice indexes.
 
-.play -edit src/slices/slices12/main.go
+.code -edit src/slices/slices12/main.go
 
 The expression `brothers[0:3]` evaluates to a slice of the 1st to 3rd Marx brother.
 
@@ -958,7 +958,7 @@ The expression `brothers[0:3]` evaluates to a slice of the 1st to 3rd Marx broth
 
 An important thing to remember when slicing a slice, is that both slices refer to the _same_ underying data.
 
-.play -edit src/slices/slices10/main.go
+.code -edit src/slices/slices10/main.go
 
 To create two independent slice values, you would use the `copy` function, which we'll discuss later.
 
@@ -970,7 +970,7 @@ You can increase the length of the slice with the `append` function, and create 
 
 What happens if you accidentally exceed the bounds of the slice?
 
-.play -edit src/slices/slices11/main.go
+.code -edit src/slices/slices11/main.go
 
 - Follow [[https://play.golang.org/p/mIWm0a1amp][this link]] and press the *Run* button.
 - Comment out `fmt.Println(primes[-1])` and see what happens.
@@ -1011,7 +1011,7 @@ This is a function declaration for `h`, which takes two arguments, two `ints`, a
 
 Your program must return the number of values specified in the function signature.
 
-.play -edit src/functions/functions4/main.go
+.code -edit src/functions/functions4/main.go
 
 * Assigning multiple return values
 
@@ -1043,13 +1043,13 @@ Maps map values of key type K to values of type V
 
 Just like making a slice, making a map is accomplished with the `make` built-in.
 
-.play -edit src/maps/maps1/main.go
+.code -edit src/maps/maps1/main.go
 
 * Inserting values into a map
 
 Inserting a value into a map looks similar to assigning a value to a slice element.
 
-.play -edit src/maps/maps2/main.go
+.code -edit src/maps/maps2/main.go
 
 If an entry already exits with that key, it will be overwritten.
 
@@ -1061,7 +1061,7 @@ _note_: maps are always _unordered_.
 
 Just like slices, maps support compact literal initalisation, which declares and initalises the map.
 
-.play -edit src/maps/maps3/main.go
+.code -edit src/maps/maps3/main.go
 
 * Retrieving a values from a map
 
@@ -1069,7 +1069,7 @@ Just like a slice, you can retrieve the value stored in a map with the syntax `m
 
 If it is present the value will be returned, if not the _zero_value_ will be returned.
 
-.play -edit src/maps/maps4/main.go
+.code -edit src/maps/maps4/main.go
 
 * Checking if a map value exists
 
@@ -1079,19 +1079,19 @@ How can we tell if Neptune actually has no moons, or if `0` was returned because
 
 Map look ups support a second syntax.
 
-.play -edit src/maps/maps5/main.go
+.code -edit src/maps/maps5/main.go
 
 * Deleting a value from a map
 
 To delete a value from a map, you use the built in `delete` function.
 
-.play -edit src/maps/maps6/main.go
+.code -edit src/maps/maps6/main.go
 
 * Iterating over a map
 
 If we wanted to print out all the values in a map we can use a form of the `for` syntax which is known as `range`.
 
-.play -edit src/range/range1/main.go
+.code -edit src/range/range1/main.go
 
 `range` loops over each entry in the map, assigning the map key to `name`, and the map value to `pop`.
 
@@ -1099,7 +1099,7 @@ If we wanted to print out all the values in a map we can use a form of the `for`
 
 We say previously that `for`range` works with maps, it also works with slices.
 
-.play -edit src/range/range2/main.go
+.code -edit src/range/range2/main.go
 
 - Follow [[https://play.golang.org/p/AmQW-OrPC1][this link]] and complete the exercise.
 - If you cannot figure it out, don't worry, there is an answer on the next slide.
@@ -1108,7 +1108,7 @@ We say previously that `for`range` works with maps, it also works with slices.
 
 If you completed the previous exercise you may have written something like this
 
-.play -edit src/range/range2a/main.go /START OMIT/,/END OMIT/
+.code -edit src/range/range2a/main.go /START OMIT/,/END OMIT/
 
 Heavily nested `if`else`if` blocks are discouraged in Go.
 
@@ -1118,7 +1118,7 @@ Instead we can use the other condition statement, `switch`.
 
 `switch` can be used 
 
-.play -edit src/switch/switch1/main.go /START OMIT/,/END OMIT/
+.code -edit src/switch/switch1/main.go /START OMIT/,/END OMIT/
 
 * fmt
 
@@ -1132,7 +1132,7 @@ We'll focus on `fmt.Printf`, the `f` stands for _formatted_output_.
 
 Here is an example.
 
-.play -edit src/fmt/fmt1/main.go /START OMIT/,/END OMIT/
+.code -edit src/fmt/fmt1/main.go /START OMIT/,/END OMIT/
 
 - Follow [[https://play.golang.org/p/UuzPWcwDrE][this link]] to experiment.
 
@@ -1144,7 +1144,7 @@ The `fmt` package supports a large number of formatting verbs and modifiers. In 
 
 The `fmt` package is smart enough to spot when you use the wrong formatting verb, or don't provide enough arguments to `fmt.Printf`.
 
-.play -edit src/fmt/fmt2/main.go /START OMIT/,/END OMIT/
+.code -edit src/fmt/fmt2/main.go /START OMIT/,/END OMIT/
 
 * Formatting verbs (cont.)
 
@@ -1152,7 +1152,7 @@ Having to choose the correct verb that matches the type of the value you want to
 
 To make it easier to use `fmt.Printf` in the simple case, you can use the `%v` verb, which know how to print _any_ value.
 
-.play -edit src/fmt/fmt3/main.go /START OMIT/,/END OMIT/
+.code -edit src/fmt/fmt3/main.go /START OMIT/,/END OMIT/
 
 - Follow [[https://play.golang.org/p/B-E7JOJ1Db][this link]] to experiment with a few more formatting verbs.
 
@@ -1433,7 +1433,7 @@ Whenever you pass a value to a function or method, the value is _copied_.
 
 In Go, the method's receiver is also a value, so it's copied when you call a method.
 
-.play -edit src/pointers/pointers1.go /START OMIT/,/END OMIT/
+.code -edit src/pointers/pointers1.go /START OMIT/,/END OMIT/
 
 - Complete the exercise in `$GOPATH/src/exercises/pointers` by making the test pass.
 
@@ -1613,7 +1613,7 @@ If you're writing a RESTful web service it's common to have to return JSON encod
 
 In Go the [[https://godoc.org/encoding/json][`encoding/json`]] package can turn Go maps and data structures into JSON.
 
-.play -edit src/jsonenc/jsonenc1.go /START OMIT/,/END OMIT/
+.code -edit src/jsonenc/jsonenc1.go /START OMIT/,/END OMIT/
 
 * Controlling JSON encoding
 
@@ -1623,7 +1623,7 @@ We can fix this and control the output of the JSON with a _tag_.
 
 The format of the JSON tag is documented on the [[https://golang.org/pkg/encoding/json/#Marshal][`json.Encode`]] method.
 
-.play -edit src/jsonenc/jsonenc2.go /START OMIT/,/END OMIT/
+.code -edit src/jsonenc/jsonenc2.go /START OMIT/,/END OMIT/
 
 * JSON encoding exercise
 
@@ -1635,7 +1635,7 @@ Go's [[https://golang.org/pkg/net/http][`net/http`]] library can be used to writ
 
 Writing web servers in Go can be as simple as a few lines. Here is an example:
 
-.play -edit src/http/http1.go
+.code -edit src/http/http1.go
 
 * Writing http servers (cont.)
 
@@ -1687,7 +1687,7 @@ We'll use `go`get` to fetch the source for `gorilla/mux`, a more advanced HTTP r
 
 The standard HTTP router, `http.ServeMux` is quite basic, so we'll upgrade to the `gorilla/mux` http router.
 
-.play -edit src/http/http2.go
+.code -edit src/http/http2.go
 
 * Line counting HTTP service
 
