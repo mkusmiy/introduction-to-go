@@ -2,12 +2,12 @@
 
 ## Short declaration syntax
 
-- Follow [https://play.golang.org/p/3Vl75w72JO]( this link ) and press the *Run* button.
+- Follow [ this link ](https://play.golang.org/p/3Vl75w72JO) and press the *Run* button.
 - Rewrite the program using the short declaration syntax; there should be no `var` declarations, only `:=`.
 
 ## Slice exercises
 
-- Follow [https://play.golang.org/p/AJk1Jgp1iE](this link) for instructions.
+- Follow [this link](https://play.golang.org/p/AJk1Jgp1iE) for instructions.
 - Declare a variable called `i` which is a slice of 5 `int`.
 - Declare a variable called `f` which is a slice of 9 `float64`.
 - Declare a variable called `s` which is a slice of 4 `string`.
@@ -15,19 +15,19 @@
 
 ## Slice initialisation 
 
-- Follow [https://play.golang.org/p/P-eBqzPCWh]( this link ) and complete the exercise.
+- Follow [ this link ](https://play.golang.org/p/P-eBqzPCWh) and complete the exercise.
 
 ## Subslices
 
-- Follow [https://play.golang.org/p/d1-jl42aTF](this link) and complete the exercise.
+- Follow [this link](https://play.golang.org/p/d1-jl42aTF) and complete the exercise.
 
 ## Inserting values into a map
 
-- Follow [https://play.golang.org/p/a-V5I0nZ5l]( this link ) and complete the exercise.
+- Follow [ this link ](https://play.golang.org/p/a-V5I0nZ5l) and complete the exercise.
 
 ## Range over slices
 
-- Follow [https://play.golang.org/p/AmQW-OrPC1]( this link ) and complete the exercise.
+- Follow [ this link ](https://play.golang.org/p/AmQW-OrPC1) and complete the exercise.
 - If you cannot figure it out, don't worry, there is an answer on the next slide.
 
 ## What time is it (exercise)
@@ -60,7 +60,7 @@ The code for this exercise is in `$GOPATH/src/exercises/input`
 To familarise you with the `io.Reader` implementations available in the `io` package, this exercise is all about Readers.
 
 - Complete the exercise in `$GOPATH/src/exercises/readers` by making the test pass.
-- If you get stuck, consult the documentation in the [https://golang.org/pkg/io/]( `io` ) package.
+- If you get stuck, consult the documentation in the [`io`](https://golang.org/pkg/io/ ) package.
 
 ##  Counting the number of lines in a file
 
@@ -115,7 +115,7 @@ In the previous example we used the shell to list files to process.
 
 In this exercise, let's extend our `countmanyfiles` program to walk the directory listing itself.
 
-To do this we use the [https://golang.org/pkg/os/#File.Readdir](`ReadDir`) method on [https://golang.org/pkg/os/#File]( `os.File` ).
+To do this we use the [`ReadDir`](https://golang.org/pkg/os/#File.Readdir) method on [`os.File`](https://golang.org/pkg/os/#File).
 
 _Note_: Be careful to only read _files_, not directories, and do not read files that don't end in `.txt`
 
@@ -131,7 +131,7 @@ Complete the program so it counts the lines in files passed via the command line
 
 ##  HTTP request
 
-The Go standard library supports writing HTTP clients and servers with the [https://golang.org/pkg/net/http/]( `net/http` ) package.
+The Go standard library supports writing HTTP clients and servers with the [`net/http`](https://golang.org/pkg/net/http/) package.
 
 Using the `net/http` package is very straight forward:
 
@@ -142,7 +142,7 @@ Using the `net/http` package is very straight forward:
  }
 ```
  
-`resp` is a [https://golang.org/pkg/net/http/#Response]( `http.Response` ) structure, which has lots of interesting fields.
+`resp` is a [`http.Response`](https://golang.org/pkg/net/http/#Response) structure, which has lots of interesting fields.
 
 Let's write a simple HTTP client that can fetch HTTP URLs.
 
@@ -159,7 +159,7 @@ The code for this exercise is in `$GOPATH/src/exercises/httpget`
 
 The service at `http://httpbin.org/` returns JSON bodies.
 
-The [https://golang.org/pkg/encoding/json/](`encoding/json`) package can decode JSON data into a map.
+The [`encoding/json`](https://golang.org/pkg/encoding/json/) package can decode JSON data into a map.
 
 ```
  result := make(map[string]string)
@@ -185,7 +185,7 @@ The `encoding/json` package requires the fields of a struct to be public (start 
 
 We can fix this and control the output of the JSON with a _tag_.
 
-The format of the JSON tag is documented on the [https://golang.org/pkg/encoding/json/#Marshal]( `json.Encode` ) method.
+The format of the JSON tag is documented on the [`json.Encode`](https://golang.org/pkg/encoding/json/#Marshal) method.
 
 The code for this exercise is in `$GOPATH/src/exercises/jsonenc`
 
